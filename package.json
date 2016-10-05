@@ -1,0 +1,23 @@
+{
+  "name": "json-format",
+  "version": "1.0.0",
+  "description": "CLI Utility for formatting JSON files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andromedado/json-format.git"
+  },
+  "keywords": [
+    "JSON",
+    "Format"
+  ],
+  "author": "Shad Downey <shad.downey@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andromedado/json-format/issues"
+  },
+  "homepage": "https://github.com/andromedado/json-format#readme"
+}

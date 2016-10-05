@@ -8,9 +8,13 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-FILE=$1
-if [ ! -e "$FILE" ]; then
-  echo "`$FILE` doesn't seem to exist."
-  exit 1
+# Thanks http://superuser.com/questions/747884/how-to-write-a-script-that-accepts-input-from-a-file-or-from-stdin
+FILE="-"
+if [ $# -ge 1 ]; then
+  FILE=$1
+  if [ ! -e "$FILE" ]; then
+    echo "`$FILE` doesn't seem to exist."
+    exit 1
+  fi
 fi
 cat "$FILE" | node "$DIR/"index.js

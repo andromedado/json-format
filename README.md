@@ -6,6 +6,10 @@ A simple CLI Utility for formatting JSON files
 
 ```
 jsonFormat FILE > PRETTYFILE
+
+## OR
+
+cat FILE | jsonFormat > PRETTYFILE
 ```
 
 ## Installation

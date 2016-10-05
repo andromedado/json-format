@@ -25,6 +25,7 @@ fi
 if [ -w "$TARGET_DIR" ]; then
   ln -s "$SOURCE" "$TARGET"
 else
+  echo "$TARGET_DIR is not writable. Using sudo:"
   sudo ln -s "$SOURCE" "$TARGET"
 fi
 

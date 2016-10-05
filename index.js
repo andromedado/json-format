@@ -10,7 +10,7 @@ process.stdin.on('end', function () {
   try {
     json = JSON.parse(stdinStr);
   } catch (e) {
-    process.stderr.write('Unable to parse JSON: ' + e);
+    process.stderr.write('Unable to parse JSON:\n' + e + '\n');
     process.exit(1);
   }
   process.stdout.write(JSON.stringify(json, void 0, ' '));
